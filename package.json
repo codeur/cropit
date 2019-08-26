@@ -1,8 +1,8 @@
 {
-  "name": "cropit",
+  "name": "@codeur/cropit",
   "main": "dist/jquery.cropit.js",
   "description": "Customizable crop and zoom.",
-  "version": "0.5.1",
+  "version": "0.6.0-alpha.0",
   "author": {
     "name": "Scott Cheng",
     "email": "me@scottcheng.com",
@@ -16,10 +16,10 @@
   "homepage": "http://scottcheng.github.io/cropit",
   "repository": {
     "type": "git",
-    "url": "git://github.com/scottcheng/cropit.git"
+    "url": "git://github.com/codeur/cropit.git"
   },
   "bugs": {
-    "url": "https://github.com/scottcheng/cropit/issues"
+    "url": "https://github.com/codeur/cropit/issues"
   },
   "license": "MIT",
   "scripts": {
@@ -47,6 +47,7 @@
     ]
   },
   "dependencies": {
+    "exif-js": "^2.3.0",
     "jquery": ">=1.9"
   },
   "devDependencies": {
@@ -58,8 +59,9 @@
     "lodash": "~3.9.3",
     "node-libs-browser": "~0.5.2",
     "pica": "^1.0.7",
-    "webpack": "~1.9.11",
-    "webpack-dev-server": "~1.9.0"
+    "raw-loader": "^3.1.0",
+    "webpack": "^4.0.0",
+    "webpack-dev-server": "^3.5.0"
   },
   "engine": "node >= 0.4.1",
   "readmeFilename": "README.md"

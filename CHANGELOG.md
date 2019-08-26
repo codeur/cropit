@@ -1,3 +1,9 @@
+## 0.6.0 (August 26, 2019)
+
+### Features
+
+* Add EXIF support
+
 ## 0.5.1 (February 27, 2016)
 
 ### Bug fixes
