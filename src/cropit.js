@@ -201,22 +201,22 @@ class Cropit {
   }
 
   onPreImageLoaded () {
-    if (typeof this.preImage.src === 'undefined' || this.preImage.src === null) {
-      if (this.shouldRejectImage({
-        imageWidth: this.preImage.width,
-        imageHeight: this.preImage.height,
-        previewSize: this.previewSize,
-        maxZoom: this.options.maxZoom,
-        exportZoom: this.options.exportZoom,
-        smallImage: this.options.smallImage
-      })) {
-        this.onImageError(ERRORS.SMALL_IMAGE)
-        if (this.image.src) { this.setImageLoadedClass() }
-        return
-      }
-      this.image.src = this.preImage.src
-      return
-    }
+    // if (typeof this.preImage.src === 'undefined' || this.preImage.src === null) {
+    //   if (this.shouldRejectImage({
+    //     imageWidth: this.preImage.width,
+    //     imageHeight: this.preImage.height,
+    //     previewSize: this.previewSize,
+    //     maxZoom: this.options.maxZoom,
+    //     exportZoom: this.options.exportZoom,
+    //     smallImage: this.options.smallImage
+    //   })) {
+    //     this.onImageError(ERRORS.SMALL_IMAGE)
+    //     if (this.image.src) { this.setImageLoadedClass() }
+    //     return
+    //   }
+    //   this.image.src = this.preImage.src
+    //   return
+    // }
     if (this.options.smallImage === 'reject' &&
       (this.preImage.width * this.options.maxZoom < this.previewSize.w * this.options.exportZoom ||
         this.preImage.height * this.options.maxZoom < this.previewSize.h * this.options.exportZoom)) {
@@ -289,7 +289,7 @@ class Cropit {
 
       ctx.drawImage(this.preImage, x, y)
       ctx.restore()
-      var finalImage = canvas.toDataURL('image/jpeg', 1.0)
+      var finalImage = canvas.toDataURL('image/jpeg', 0.75)
 
       this.image.src = this.imageSrc = finalImage
     } else {

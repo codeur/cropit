@@ -2,7 +2,8 @@
 <html>
   <head>
     <title>cropit</title>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <meta charset="utf-8"/>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script src="../dist/jquery.cropit.js"></script>
 
     <style>
@@ -50,9 +51,9 @@
     <script>
       $(function() {
         $('.image-editor').cropit({
-          imageState: {
-            src: 'http://lorempixel.com/500/400/',
-          },
+          // imageState: {
+          //   src: 'http://lorempixel.com/500/400/',
+          // },
         });
 
         $('.rotate-cw').click(function() {
